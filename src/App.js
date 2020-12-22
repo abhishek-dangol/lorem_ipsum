@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import data from "./data";
+
 function App() {
   document.title = "Lorem Ipsum";
   const [count, setCount] = useState(0);
@@ -19,16 +20,16 @@ function App() {
 
   return (
     <section className="section-center">
-      <h3>Generate your own cooler lorem ipsum</h3>
+      <h2>Tired of the boring Lorem Ipsum</h2>
       <form className="lorem-form" onSubmit={handleSubmit}>
-        <label htmlFor="amount">Number of Paragraphs:</label>
+        <label htmlFor="amount">paragraphs: </label>
         <input
           type="number"
           name="amount"
           id="amount"
           value={count}
           onChange={(e) => setCount(e.target.value)}
-        />
+        ></input>
         <button type="submit" className="btn">
           generate
         </button>
